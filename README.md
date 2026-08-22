@@ -1,4 +1,4 @@
 # ai-kenkyukai-portal
 ai-kenkyukai-portal by AI-chat
 
-CloudfrareOS(AI-chat) -> Github ->Cloudfrare Pages
+CloudflareOS(AI-chat) -> Github ->Cloudflare Pages
