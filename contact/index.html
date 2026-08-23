@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>お問い合わせ・参加申し込み ― AI研究会</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="logo-link" href="../index.html">
+                <span class="cube-svg">
+                    <svg width="48" height="48" viewBox="0 0 200 200" aria-hidden="true">
+                        <defs>
+                            <linearGradient id="hgtop" x1="0" y1="0" x2="1" y2="1">
+                                <stop offset="0" stop-color="#8ee3b6" />
+                                <stop offset="1" stop-color="#22a6c9" />
+                            </linearGradient>
+                            <linearGradient id="hgleft" x1="0" y1="0" x2="0.4" y2="1">
+                                <stop offset="0" stop-color="#1fb7a6" />
+                                <stop offset="1" stop-color="#1d5fd6" />
+                            </linearGradient>
+                            <linearGradient id="hgright" x1="0" y1="0" x2="0.6" y2="1">
+                                <stop offset="0" stop-color="#279fd9" />
+                                <stop offset="1" stop-color="#1c3fae" />
+                            </linearGradient>
+                        </defs>
+                        <g stroke="#16233b" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+                            <polygon points="100,14 178,58 100,102 22,58" fill="url(#hgtop)" />
+                            <polygon points="22,58 100,102 100,190 22,146" fill="url(#hgleft)" />
+                            <polygon points="178,58 100,102 100,190 178,146" fill="url(#hgright)" />
+                        </g>
+                    </svg>
+                </span>
+                <span class="logo-text">
+                    <span class="logo-title">AI研究会</span>
+                    <span class="logo-slogan">未来のための。</span>
+                </span>
+            </a>
+            <nav class="desktop-nav">
+                <a href="../index.html">トップ</a>
+                <a href="../news/index.html">お知らせ</a>
+                <a href="../documents/index.html">公開資料</a>
+                <a href="index.html" class="active">お問い合わせ</a>
+            </nav>
+            <button class="menu-btn" aria-label="メニュー">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="3" y1="6" x2="21" y2="6" />
+                    <line x1="3" y1="12" x2="21" y2="12" />
+                    <line x1="3" y1="18" x2="21" y2="18" />
+                </svg>
+            </button>
+        </div>
+        <nav class="mobile-nav">
+            <a href="../index.html">トップ</a>
+            <a href="../news/index.html">お知らせ</a>
+            <a href="../documents/index.html">公開資料</a>
+            <a href="index.html" class="active">お問い合わせ</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="page-header">
+            <h1>お問い合わせ・参加申し込み</h1>
+        </div>
+        <section class="section section-narrow">
+            <!--
+      このサイトは静的サイト（Cloudflare Pages）なのでサーバー処理はできません。
+      下記フォームは mailto: で送信する簡易版です。実運用では、
+      1) action の宛先メールアドレスを実際のものに変更するか、
+      2) Formspree ( https://formspree.io/ ) 等のフォーム送信サービスの action URL に差し替えるか、
+      3) Cloudflare Pages Functions ( /functions/api/contact.js ) を追加してAPI化する
+      ことをおすすめします。詳しくは README.md を参照してください。
+    -->
+            <form class="contact-form" action="mailto:info@ai-kenkyukai.example.jp" method="POST" enctype="text/plain">
+                <label>お名前 *
+                    <input name="name" type="text" required>
+                </label>
+                <label>メールアドレス *
+                    <input name="email" type="email" required>
+                </label>
+                <label>ご所属・会社名（任意）
+                    <input name="affiliation" type="text">
+                </label>
+                <fieldset class="radio-group">
+                    <legend>参加のご希望 *</legend>
+                    <label class="radio-option"><input type="radio" name="participation" value="参加を希望する" required>
+                        参加を希望する</label>
+                    <label class="radio-option"><input type="radio" name="participation" value="検討中（情報がほしい）">
+                        検討中（情報がほしい）</label>
+                    <label class="radio-option"><input type="radio" name="participation" value="問い合わせのみ">
+                        問い合わせのみ</label>
+                </fieldset>
+                <label>メッセージ *
+                    <textarea name="message" required placeholder="ご質問、参加にあたってのご要望など"></textarea>
+                </label>
+                <p class="form-note">※ 送信ボタンを押すとお使いのメールソフトが起動します。メールソフトが設定されていない場合は、下記の連絡先まで直接ご連絡ください。</p>
+                <button class="btn btn-primary" type="submit">送信する</button>
+            </form>
+
+            <div class="contact-info-box">
+                <p><strong>運営事務局</strong></p>
+                <p>上田商工会議所 情報教育文化部会 事務局</p>
+                <p>〒386-8522 長野県上田市大手1-10-22</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>
+                <a class="logo-link" href="../index.html">
+                    <span class="cube-svg">
+                        <svg width="34" height="34" viewBox="0 0 200 200" aria-hidden="true">
+                            <defs>
+                                <linearGradient id="fgtop" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0" stop-color="#8ee3b6" />
+                                    <stop offset="1" stop-color="#22a6c9" />
+                                </linearGradient>
+                                <linearGradient id="fgleft" x1="0" y1="0" x2="0.4" y2="1">
+                                    <stop offset="0" stop-color="#1fb7a6" />
+                                    <stop offset="1" stop-color="#1d5fd6" />
+                                </linearGradient>
+                                <linearGradient id="fgright" x1="0" y1="0" x2="0.6" y2="1">
+                                    <stop offset="0" stop-color="#279fd9" />
+                                    <stop offset="1" stop-color="#1c3fae" />
+                                </linearGradient>
+                            </defs>
+                            <g stroke="#16233b" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+                                <polygon points="100,14 178,58 100,102 22,58" fill="url(#fgtop)" />
+                                <polygon points="22,58 100,102 100,190 22,146" fill="url(#fgleft)" />
+                                <polygon points="178,58 100,102 100,190 178,146" fill="url(#fgright)" />
+                            </g>
+                        </svg>
+                    </span>
+                    <span class="logo-text"><span class="logo-title" style="font-size:1.05rem">AI研究会</span></span>
+                </a>
+                <p>上田商工会議所 情報教育文化部会 事務局</p>
+                <p>〒386-8522 長野県上田市大手1-10-22</p>
+            </div>
+            <div>
+                <p><strong>サイトマップ</strong></p>
+                <p><a href="../index.html">トップ</a></p>
+                <p><a href="../news/index.html">お知らせ</a></p>
+                <p><a href="../documents/index.html">公開資料</a></p>
+                <p><a href="index.html">お問い合わせ</a></p>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
