@@ -1,4 +1,24 @@
-# ai-kenkyukai-portal
-ai-kenkyukai-portal by AI-chat
+# AI研究会 公式ポータル（一般公開部分）静的サイト書き出し
 
-CloudflareOS(AI-chat) -> Github ->Cloudflare Pages
+トップ・お知らせ・公開資料・お問い合わせの4ページのみを、Cloudflare Pagesにそのままアップロードできる
+静的サイトとして書き出したものです（元のGadget本体とは別物・スナップショットです）。
+
+## デプロイ方法（Cloudflare Pages）
+
+1. このフォルダ一式（index.html を含むディレクトリ）を用意する。
+2. Cloudflare ダッシュボード → Workers & Pages → Pages → 「アップロード」からこのフォルダをドラッグ＆ドロップ、
+   もしくは `wrangler pages deploy .` でデプロイ。
+3. ビルドコマンド・出力ディレクトリの設定は不要（静的ファイルのみのため）。
+
+## 注意点・制限事項
+
+- このサイトはGadgetのデータベース（お知らせ・公開資料・問い合わせ受信）とは**接続していません**。
+  お知らせ・資料の内容は書き出し時点のスナップショットです。内容を更新する場合は、
+  Gadget側の管理者に依頼して再度エクスポートするか、直接HTMLを編集してください。
+- お問い合わせフォームはサーバーを持たないため、`mailto:` によるメールソフト起動方式にしています。
+  実運用時は `contact/index.html` 内のコメントを参照し、
+  - 宛先メールアドレスを実際のものに変更する
+  - または [Formspree](https://formspree.io/) 等のフォーム送信サービスに差し替える
+  - または Cloudflare Pages Functions でAPIを実装する
+  のいずれかをおすすめします。
+- 「メンバー専用」ページは一般公開部分ではないため、この書き出しには含まれていません。
